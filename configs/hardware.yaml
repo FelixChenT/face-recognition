@@ -1,0 +1,12 @@
+﻿hardware:
+  target: "arm64-edge"
+  soc: "snapdragon-8-gen2"
+  ram_limit_mb: 2048
+  storage_limit_mb: 128
+  preferred_accelerators:
+    - "cpu"
+    - "gpu"
+  notes:
+    - "Target inference latency <= 50ms for 112x112 RGB crops."
+    - "Models must remain under 10MB once quantized."
+    - "Kernel ops restricted to those supported by TFLite/ONNX Runtime." 
